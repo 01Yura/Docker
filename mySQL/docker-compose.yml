@@ -1,0 +1,29 @@
+version: "1.0"
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_DATABASE: mysql_db
+      MYSQL_USER: yura
+      MYSQL_PASSWORD: yura
+    ports:
+      - "3306:3306"
+    volumes:
+      - d:/yura/mysql:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: toor
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql

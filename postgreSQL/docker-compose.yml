@@ -1,8 +1,8 @@
-version: '1.0'
+version: "1.0"
 
 services:
   db:
-    container_name: pg_db
+    container_name: postgresql
     image: postgres
     environment:
       POSTGRES_USER: root
@@ -10,6 +10,8 @@ services:
       POSTGRES_DB: my_db
     ports:
       - "5432:5432"
+    volumes:
+      - d:/yura/postgresql:/var/lib/postgresql/data
 
   pgadmin:
     container_name: pgadmin
