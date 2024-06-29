@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: toor
-      MYSQL_DATABASE: mysql_db
+      #      MYSQL_DATABASE: mysql_db
       MYSQL_USER: yura
       MYSQL_PASSWORD: yura
     ports:
