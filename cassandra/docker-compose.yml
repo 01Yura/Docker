@@ -14,7 +14,4 @@ services:
     ports:
       - "9042:9042"
     volumes:
-      - cassandra_data:/var/lib/cassandra
-
-volumes:
-  cassandra_data: d:/yura/cassandra
+      - d:/yura/cassandra:/var/lib/cassandra
