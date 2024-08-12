@@ -2,6 +2,9 @@
 curl -fsSL https://test.docker.com -o test-docker.sh
 sudo sh test-docker.sh    
 
+Установка докер на Ubuntu:
+https://docs.docker.com/engine/install/ubuntu/#prerequisites
+
 docker version - посм версию клиента и сервера
 docker images - просмотр всех образов которые есть на локальном компе
 docker rmi images имя_образа - удаление образа
