@@ -156,4 +156,5 @@ docker images - теперь после этой команды у нас поя
 docker login - логинимся
 docker push 01yura/kuber_python_server:1.0 - пушим на сервер
 
-        
+docker tag 01yura/k8s-web-to-nginx-ru:latest 01yura/k8s-web-to-nginx-ru:1.0.0 - сделать из образа latest образ с какой-либо версией         
+docker build . -t 01yura/k8s-web-to-nginx-ru:2.0.0 - создать образ из Dockerfile
