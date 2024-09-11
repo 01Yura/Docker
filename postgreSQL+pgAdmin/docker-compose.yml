@@ -11,7 +11,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - d:/yura/postgresql:/var/lib/postgresql/data
+      - g:/yura/db_volumes/postgresql:/var/lib/postgresql/data
 
   pgadmin:
     container_name: pgadmin

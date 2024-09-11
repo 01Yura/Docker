@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  clickhouse-server:
+    image: clickhouse/clickhouse-server:latest
+    container_name: clickhouse-server
+    environment:
+      - CLICKHOUSE_USER=root
+      - CLICKHOUSE_PASSWORD=toor
+    ports:
+      - "8123:8123" # HTTP интерфейс
+      - "9000:9000" # Нативный интерфейс
+    ulimits:
+      nofile:
+        soft: 262144
+        hard: 262144
+    volumes:
+      - G:\Yura\db_volumes\clickhouse:/var/lib/clickhouse
+    restart: unless-stopped
